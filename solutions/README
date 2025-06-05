@@ -1,4 +1,4 @@
-## Task 1
+## TASK 1
 # Preprocess
 By running the command "gcc -E solutions/sample.c -o solutions/sample.i" the information in file sample.c is accessed from the included libraries and written into a new file sample.i. The new ".i" file includes the whole studio.h library with all included functions. Furthermore, in sample.i predefined macros are replaced with their associated value.
 
@@ -11,7 +11,7 @@ The assembler created an object file sample.o based on sample.s by running "gcc 
 # Link
 The contents of the .o file are linked with missing functions in the available libraries to create the executable file "sample. So the command "gcc solutions/sample.o -o solutions/sample" created an executable file with functions of the .o file but in commands that your processor is able to understand.
 
-## Task 2
+## TASK 2
 # grep
 With the grep command the text file is searched for parts that contain a specific phrase, here printf. The result is given as an output as well as the line where it was found, here line 4.
 
@@ -27,3 +27,12 @@ You can search "/printf" and replace ":%s/printf/debug_printf/g" when working in
 #vim CLI
 This procedure allows you to execute the same steps as in interactive vim but without opening the editor.
 
+## TASK 3
+# The role of extern declarations
+The extern declaration in main.c is important to inform the compiler that the function "add" is defined in a different file "add.c". In this case, without the extern declaration the compiler cant find the function and an error occurs.
+
+# Why separating compilation can speed up builds
+Especially for larger projects it can be an advantage to compile separately because if you make changes in your project you just have to compile a certain, smaller, file and link it to the other files of the project. That contributes to structural clarity of your project but also reduced the amount of data you have to compile at once.
+
+# How manual linking differs from letting gcc handle all steps in one command
+Linking manually provides more flexibility at the additional cost of more commands to type.
