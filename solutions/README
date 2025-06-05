@@ -10,3 +10,20 @@ The assembler created an object file sample.o based on sample.s by running "gcc 
 
 # Link
 The contents of the .o file are linked with missing functions in the available libraries to create the executable file "sample. So the command "gcc solutions/sample.o -o solutions/sample" created an executable file with functions of the .o file but in commands that your processor is able to understand.
+
+## Task 2
+# grep
+With the grep command the text file is searched for parts that contain a specific phrase, here printf. The result is given as an output as well as the line where it was found, here line 4.
+
+#sed
+The sed command replaces printf with debug_printf in the whole file.
+
+#awk
+The awk command is similar to the grep function but with the possibility of only searching in a predefined range of lines.
+
+#vim interactive
+You can search "/printf" and replace ":%s/printf/debug_printf/g" when working in the vim editor. With "/printf" the search results are visually highlighted in the editor.
+
+#vim CLI
+This procedure allows you to execute the same steps as in interactive vim but without opening the editor.
+
