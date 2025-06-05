@@ -1,0 +1,12 @@
+## Task 1
+# Preprocess
+By running the command "gcc -E solutions/sample.c -o solutions/sample.i" the information in file sample.c is accessed from the included libraries and written into a new file sample.i. The new ".i" file includes the whole studio.h library with all included functions. Furthermore, in sample.i predefined macros are replaced with their associated value.
+
+# Compile to assembly
+The command "gcc -S solutions/sample.i -o solutions/sample.s" generated a file, here "sample.s", which contains the information in a language that your machine is able to process. Therefore, the content of "sample.i" is translated/compiled into assambly instructions.
+
+# Assemble
+The assembler created an object file sample.o based on sample.s by running "gcc -c solutions/sample.s -o solutions/sample.o". The object file is written in machine language and consists of a series of zeros and ones.
+
+# Link
+The contents of the .o file are linked with missing functions in the available libraries to create the executable file "sample. So the command "gcc solutions/sample.o -o solutions/sample" created an executable file with functions of the .o file but in commands that your processor is able to understand.
